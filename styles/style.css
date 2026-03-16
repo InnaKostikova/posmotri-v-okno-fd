@@ -69,6 +69,7 @@ ol {
 }
 
 .result__video-container {
+    position: relative;
     width: 711px;
     height: 386px;
     margin-bottom: 16px;
@@ -131,7 +132,7 @@ input[type="text"] {
     opacity: 0;
 }
 
-.search-form__checkbox:checked + .search-form__pseudo-checkbox {
+.search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
     opacity: 1;
 }
 
@@ -217,6 +218,7 @@ input[type="text"] {
 }
 
 .content__list-container {
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: 30px;
