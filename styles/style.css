@@ -19,6 +19,7 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 
 /*.page:focus {
@@ -59,12 +60,15 @@ ol {
 
 .content {
     display: flex;
-    /*align-items: flex-end;*/
+    align-items: end;
     width: 1140px;
     gap: 30px;
+    
 }
 
 .result {
+
+
 
 }
 
