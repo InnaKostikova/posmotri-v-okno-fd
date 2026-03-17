@@ -81,10 +81,6 @@ video:focus-visible {
     outline: 1px solid #fff;
     outline-offset: 1px;
 }
-/*
-Хотела реализовать кастомную обводку в самом видео плеере, но оказалось, что это очень сложно
-на данном этапе. В ТЗ это вроде не требовалось?! Реализовала только вокруг плеера
- */
 
 .search-form {
     display: flex;
@@ -108,10 +104,6 @@ input[type="text"] {
 
 .search-form__textfield::placeholder {
     color: rgb(255 255 255 / 0.7);
-    font-family: 'Fira Sans Condensed', sans-serif;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 1.3;
 }
 
 .search-form__textfield:focus {
@@ -164,12 +156,17 @@ input[type="text"] {
     align-items: center;
     width: fit-content;
     gap: 5px;
+    cursor: pointer;
 }
 
-.search-form__label:hover {
+/*
+Антон, большое спасибо за развернутые комментарии! Вы мне очень помогли, не только
+исправить ошибки, но и понять, почему сделано так! =)
+ */
+
+.search-form__label:hover .search-form__label-text {
     text-decoration: underline;
     text-underline-offset: 3px;
-    cursor: pointer;
 }
 
 .button {
@@ -181,6 +178,7 @@ input[type="text"] {
     background-color: transparent;
     border: 1px solid #fff;
     cursor: pointer;
+    min-height: 34px;
 }
 
 .button:hover {
@@ -203,7 +201,6 @@ input[type="text"] {
 
 .search-form__submit-button {
     width: 194px;
-    height: 34px;
     align-self: end;
 }
 
@@ -254,10 +251,6 @@ input[type="text"] {
 
 .content__card-link:hover {
     text-decoration: underline;
-    /* text-underline-offset: 3px;
-    очень хотела отодвинуть подчеркивание т.к. получается не очень красиво,
-    но тогда ломается подчеркивание в описании карточки
-     */
 }
 
 .content__card-link:active {
@@ -289,11 +282,13 @@ input[type="text"] {
     font-family: 'Oswald', sans-serif;
     font-weight: 700;
     font-size: 30px;
+    line-height: 100%;
     text-transform: uppercase;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
     max-width: 196px;
+    margin-bottom: 6px;
 }
 
 .content__video-card-description {
